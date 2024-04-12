@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let marks = [12, 13, 14, 16, 18, 19];
+        console.log(marks);
+        //   let name =["ankush","niteash","yogeash", "ashish"];
+        //   console.log(name);
+        let city = [
+            "delhi", "Punjab", "mumbay"
+        ];
+        for (let idx = 0; idx < city.length; idx++) {
+            console.log(city[idx]);
+        }
+        let clas = ["sec1", "sec2", "sec3", "sec4", "sec5"];
+        for (let idx = 0; idx < clas.length; idx++) {
+            console.log(clas[idx]);
+        }
+        let car = ["lambo", "frary", "minicopper", "gt apolo", "hondacity"];
+        for (let idx = 0; idx < car.length; idx++) {
+            console.log(car[idx]);
+        }
+        //   sum in  array in forof  loops
+        let mark = [85, 97, 44, 37, 76, 55];
+        let sum = 0;
+        for (let valu of mark) {
+            sum += valu;
+        }
+        let avg = sum / mark.length;
+        console.log('avg mark of the class =', avg);
+        // Qa
+        let marke = [25, 25, 25, 25];
+        let su = 0;
+        for (let v of marke) {
+            su += v;
+        }
+        let av = su / marke.length;
+        console.log(' av marks of the class =', av);
+
+        // Qb 
+        let m = [50, 50, 50, 50, 50];
+        let s = 0;
+        for (let b of m) {
+            s -= b;
+        }
+        let a = s / m.length;
+        console.log('b marks of the class =', a);
+        // Q2 for a given arrays with price of 5 items -> { 250,645,300, 900,50} all times have an offer of 10% off on them. change the arrays to store final price after appliying offer
+        let items = [ 200, 300, 400, 500, 900];
+        for( let i=0; i < items.length; i++){
+            let offer = items[i]/10;
+            items [i]-= offer;
+        }
+        console.log(items);
+        let item =[ 150, 250, 350, 450, 550, 650, 750];
+        for (let i=0; i < item.length; i++){
+        let offer= item[i]/10;
+        item[i] -= offer;
+    }
+    console.log(item);
+    let ite = [ 10,30,50,70,90,110,];
+    for ( let i=0; i < ite.length; i++){
+        let offer = ite[i]/10;
+        ite[i] += offer;   
+    }
+    console.log(ite);
+    let it = [ 33, 13, 70, 53, 55];
+    for (let i=0; i < it.lenght; i++){
+        let offer = it[i]/10;
+        it[i] -= offer;
+    } 
+    console.log(it);
+//  array method push, pop, tostring(),concat(): joins multiple arrays & return results, unshift(): add to start, shift()delet from start & return;
+// slice(): returns a piece of the arrays, splice(); change orginal array (add, remove ,replace);
+let fooditem=[ "pootato", "apple", "litchi","tomato"];
+foooditem.pop();
+console.log(fooditem);
+
+let compaines = [ "bloombreg","microsoft", "uber", "google", "ibm", "netflic"];
+compaines.shift();
+console.log(compaines);
+    </script>
+</body>
+
+</html>

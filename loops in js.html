@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- loops
+       loops are used to execute a piece of code again & agian 
+     loops type 
+     1. for loops
+     2. While loops
+     3.Do while loops
+     -->
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            console.log(
+                "ankush"
+            );
+        }
+        for (let count = 5; count <= 1000; count++) {
+            console.log("babita ankush");
+        }
+        //  <!-- calculate the sum 1 to 5 -->
+        let sum = 0;
+        for (let b = 10; b <= 15; b++) {
+            sum = sum + b;
+        }
+        console.log("sum=", sum);
+        console.log("loop are end");
+        // while loops
+        let i = 1;
+        while (i <= 5) {
+            console.log("i =", i);
+            i++;
+        }
+        // do while loops
+        let c = 20;
+        do {
+            console.log("babita");
+            c++;
+        } while (c <= 20);
+    </script>
+    <!-- solving question -->
+    <script>
+        // Q print all even numbers from 0 to 100.
+        for (let num = 0; num <= 100; num++) {
+            if (num % 2 === 0) {
+                console.log("num=", num);
+            }
+        }
+        for (let nom = 100; nom <= 200; nom++) {
+            if (nom % 2 !== 0) {
+                console.log("nom=", nom);
+            }
+        }
+        for (let nom = 200; nom <= 400; nom++) {
+            if (nom % 2 !== 0) {
+                console.log("nom=", nom);
+            }
+        }
+        Q2 create a game where you start with any random game number. ask the user to keep guessing the game number until the user enters correct value.
+        let gameNum= 25;
+        let userNum= prompt("guess the game number : ");
+        while(userNum == gameNum){
+          userNum=prompt("you guess the wrong number.guess again :");
+        }
+        console.log("congratulation, you enterd the right number");
+
+    let luckynum = 22;
+    let aniNum = prompt("guess the lucky num :" );
+    while(aniNum !=  luckynum ){
+        aninum = prompt(" you are unlucky . get your lucky num");
+    }
+    console.log("congratulation, you are the lucky");
+    </script>
+</body>
+
+</html>

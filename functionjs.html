@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- function. in js -->
+    <script>
+        // how to call function 
+        function myfunction() {
+            console.log("welcome to india");
+            console.log("hello world");
+        }
+        myfunction();
+
+        function myfunction(msg) { //patameter->input
+            console.log(msg);
+        }
+        myfunction("i  love js");
+        function myfunction(msg) {
+            console.log(msg);
+        }
+        myfunction("babita ankush");
+        function myfunction(msg) {
+            console.log(msg);
+        }
+        myfunction(" ankush work is done");
+        function sum(x, y) {
+            s = x / y;
+            return s;
+        }
+        let value = sum(9, 2);
+        console.log(value);
+
+        myfunction("babita your work is done")
+        function t(b, c) {
+            s = b / c;
+            return s;
+        }
+        let valu = t(200, 5);
+        console.log(valu);
+
+        //   function countvowels(str){
+        //     let count = 0;
+        //     for(const char of str){
+        //         if(
+        //             char === "a"||
+        //             char === "n"||
+        //             char === "k"||
+        //             char === "i"||
+        //             char === "t"
+        //         ){
+        //         count++;
+        //     }
+        //     }
+        // }
+        //   console.log(countvowels);
+        function countvowels(str) {
+            let count = 0;
+            for (const char of str) {
+                if (
+                    char === "a" ||
+                    char === "e" ||
+                    char === "i" ||
+                    char === "o" ||
+                    char === "u" ||
+                    char === "A" ||
+                    char === "E" ||
+                    char === "I" ||
+                    char === "O" ||
+                    char === "U"
+                ) {
+                    count++;
+                }
+            }
+            return count; // return the count value
+        }
+
+        console.log(countvowels("example")); // Example usage of the function
+        // for each loops in arrays
+        // arr.foreach(callbackfunction)
+        // call backfunction: here, is it a function to execute for each elements in the way
+        //  a callback is a function passed as an argument to another function
+        let arr = [
+            9 * 1 - 9,
+            9 * 2 - 18,
+            9 * 3 - 27,
+            9 * 4 - 36,
+            9 * 5 - 45,
+            9 * 6 - 54,
+            9 * 7 - 63,
+            9 * 8 - 72,
+            9 * 9 - 81,
+            9 * 10 - 90,
+        ];
+
+        arr.forEach((va, idx) => {
+            console.log(va);
+        });
+        //  square the num in function in foreachloop
+        let ar = [2, 3, 4, 5, 6,];
+        ar.forEach(ar => {
+            console.log(ar * ar);
+        });
+        let kl = [10, 20, 40, 30, 50, 60
+        ];
+        kl.forEach(kl => {
+            console.log(kl * kl);
+        });
+        let array = [-2, -3, -4, -5, -6, -7, -8, -9];
+        array.forEach(array => {
+            console.log(array * array);
+        });
+        let ankus = [-11, -12, -13, -14, -15, -16, -17, -18, 19, -20];
+        ankus.forEach(ankus => {
+            console.log(ankus * ankus);
+        });
+        let ankush = [44, 55, 66, 77, 11, 22, 33, 78, 19, 30];
+        ankush.forEach(ankush => {
+            console.log(ankush * ankush);
+        });
+        let babita = [27, 2005, 18, 19, 2001, 2003];
+        babita.forEach(babita => {
+            console.log(babita * babita);
+        });
+        let imran = [1, 2, 3, 4, 5, 6, 7];
+        let calcsquare = (imran) => {
+            console.log(imran * imran);
+        };
+        // map in function
+        // creat a new array with the results of some operation. The 
+        // value its callback returns are used to from new array
+        // syntax: arr.map(callbackFnx(value, index,array))
+        let nums = [21, 31, 33, 43, 53, 66,];
+        nums.map((val) => {
+            return val;
+        });
+        console.log(nums);
+        let num = [24, 23, 26]
+        // add newarray in map functon
+        let newarray = num.map((val) => {
+            return val * 2;
+        });
+        console.log(newarray);
+
+        let nu = [56, 76, 77, 78, 79, 80, 81];
+        let newarra = nu.map((va) => {
+            return va / 5;
+        })
+        console.log(newarra);
+
+        let n = [23, 32, 24, 42, 25, 52, 26, 62,];
+        let newarr = n.map((v) => {
+            return v * v;
+        })
+        console.log(newarr);
+        // filter in function
+        // creates a new array of elements that give true for a conition/filter.
+        //  eg.all even elements
+        // find the even number help of filter function 
+        let ankusharya = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+        let evennum = ankusharya.filter((val) => {
+            return val % 2 === 0;
+        })
+        console.log(evennum);
+
+        //  find the odd number with they help of filter fuction
+        let babitaankush = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+        let oddnum = babitaankush.filter((va) => {
+            return va % 2 !== 0;
+        })
+        console.log(oddnum);
+
+        //  find the greaterthan nomber with help of filter function
+        let ankit = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
+        let greaterthan = ankit.filter((val) => {
+            return val > 3;
+        });
+        console.log(greaterthan);
+
+        // find the lessthan nomber with the help of the filter function
+        let lessthan = ankit.filter((val) => {
+            return val < 22;
+        })
+        console.log(lessthan);
+
+
+        // reduce function
+        // performs some operation reduce the array to a single value . it returns that single value.
+        let an = [1, 2, 3, 4, 5, 6, 7, 8];
+        let output = an.reduce((pre, next) => {
+            return pre + next;
+        });
+        console.log(output);
+
+        let a = [10, 20, 30, 40, 50, 60, 70, 80,];
+        let outpu = a.reduce((prev, next) => {
+            return prev + next;
+        });
+        console.log(outpu);
+
+        let ba = [90, 100, 110, 120, 130, 140, 150, 160, 170,];
+        let out = ba.reduce((prev, next) => {
+            return prev * next;
+        });
+        console.log(out);
+
+        //   greater than reduce in function
+        let ank = [1000, 3000, 4000, 8000, 2000, 9000, 1000];
+        let bab = ank.reduce((prev, next) => {
+            return prev > next ? prev : next;
+        });
+        console.log(bab);
+        let anku = [1000, 3000, 4000, 8000, 2000, 9000, 1000];
+        let babi = ank.reduce((prev, next) => {
+            return prev < next ? prev : next;
+        });
+        console.log(babi);
+
+        //  we are given array of marks of students. filter out of the marks of students that scored 90+
+
+        let marks = [97, 64, , 49, 99, 96, 86];
+        let topper = marks.filter((val) => {
+            return val > 90;
+        });
+        console.log(topper);
+
+        let mark = [97, 64, , 49, 99, 96, 86];
+        let tomidder = mark.filter((val) => {
+            return val < 90;
+        });
+        console.log(tomidder);
+
+        let mar = [13, 17, 19, 23, 33, 43, 53];
+        let tofailer = mar.filter((val) => {
+            return val < 33;
+        });
+        console.log(tofailer);
+
+
+        // take a number n as input from user. creat an array 
+        // of numbers from 1 to n. use the reduce method to calculate 
+        // sum of all numbers in the array. use the reduce metho to 
+        // calculate product of all numbers in the array.
+          
+         let c = prompt("enter the value ");
+         let ab = [];
+         for( let i =1 ; i<=c; c++){
+            ab[-i] = 1;
+         }
+         console.log(ab);
+    </script>
+</body>
+
+</html>

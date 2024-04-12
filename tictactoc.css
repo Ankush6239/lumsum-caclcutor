@@ -1,0 +1,38 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: black;
+    text-align: center;
+    align-items: center;
+}
+.container{
+    height: 70vh;
+    margin-left: 400px;
+
+}
+.game{
+  height: 60vmin;
+  width: 80vmin;
+}
+.box{
+   height: 18vmin;
+   width: 18vmin;
+   margin: 10px;
+   border:none;
+   border-radius: 10px;
+   box-shadow: rgba(red, green, blue, alpha);
+   font-size: 30px;
+   background-color: bisque;
+}
+.btn{
+    padding: 10px;
+    font-size: 20px;
+    border: 0cap;
+    border-radius: 10px;
+    background-color: aqua;
+    color: black;
+    font-weight:bold;
+    font-style: italic;
+}
