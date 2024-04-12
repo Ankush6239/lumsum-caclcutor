@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card" style="width;18rem">
+    <div class="card-body">
+        <h5 class="card-title">
+            Lumsum Calculator
+        </h5>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Investment Amount</label>
+            <input type="text" id="investmentAmount" class="form-control" value="10000" onchange="lumpsumCalculator()"/>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Rate of Interest</label>
+            <input type="text"  id="rateOfInterest"  class="form-control" value="8" onchange="lumpsumCalculator()"/>
+          </div> 
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Time Period (in years)</label>
+            <input type="text" id="timePeriod" class="form-control" value="5" onchange="lumpsumCalculator()"/>
+          </div>  
+          <table style="border: medium none;" class="tb10Table">
+            <tr class="">
+              <td colspan="1" rowspan="1" style="padding-left: 0px; padding-top: 16px; padding-bottom: 16px;" class="clrSubText">Investment amount</td>
+              <td colspan="1" rowspan="1" style="padding-right: 0px; padding-top: 16px; padding-bottom: 16px;" class="fw500 right-align">₹ <span id="investment_amount">10,000</span>
+              </td>
+            </tr>
+            <tr class="">
+              <td colspan="1" rowspan="1" style="padding-left: 0px; padding-top: 16px; padding-bottom: 16px;" class="clrSubText">Est. returns</td>
+              <td colspan="1" rowspan="1" style="padding-right: 0px; padding-top: 16px; padding-bottom: 16px;" class="fw500 right-align">₹ <span id="returns">1,466</span>
+              </td>
+            </tr>
+            <tr class="">
+              <td colspan="1" rowspan="1" style="padding-left: 0px; padding-top: 16px; padding-bottom: 16px;" class="clrSubText">Total value</td>
+              <td colspan="1" rowspan="1" style="padding-right: 0px; padding-top: 16px; padding-bottom: 16px;" class="fw500 right-align">₹ <span id="total_value">11,466</span>
+              </td>
+            </tr>
+          </table>   
+    </div>
+    </div>
+    
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	new file:   LUMSUM.html
+#
+
+</body>
+<script>
+    function lumpsumCalculator(){
+        let investAmount = parseFloat(document.getElementById("investmentAmount").value);
+        let expectedReturn = parseFloat(document.getElementById("rateOfInterest").value);
+        let investmentPeriod = parseFloat(document.getElementById("timePeriod").value);
+        let futureValue = investAmount*Math.pow(1+expectedReturn,investmentPeriod);
+        let totalValue = futureValue.toFixed(0);
+        let estimatedReturns = (totalValue- investAmount).toFixed(0);
+
+        document.getElementById("investment_amount").innerHTML= numberWithCommas(investAmount.toFixed(0));
+        document.getElementById("returns").innerHTML=numberWithCommas(estimatedReturns);
+        document.getElementById("total_value").innerHTML= numberWithCommas(totalValue);
+        function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+      
+      lumpsumCalculator();
+    }
+</script>
+</html>
